@@ -33,7 +33,8 @@ $$
 ---
 Часть таблицы множеств классов эквивалентности НКА:
 
-<img width="1024" height="444" alt="_tableNFA" src="https://github.com/user-attachments/assets/863a67b7-50eb-4abe-82a6-86eec898b191" />
+<img width="1024" height="364" alt="NFA_2" src="https://github.com/user-attachments/assets/be9b7640-da4f-439b-b09e-1ddb388d471f" />
+
 
 
 
