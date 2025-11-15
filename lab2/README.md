@@ -27,7 +27,8 @@ $$
 
 НКА, построенный по ε-НКА:
 
-<img width="1559" height="988" alt="final_НКА(well)" src="https://github.com/user-attachments/assets/71681250-fc38-43a6-bd16-4429e00e410b" />
+<img width="2079" height="600" alt="graphviz (22)" src="https://github.com/user-attachments/assets/031b638b-27a7-450e-9cd9-590f5dd94a3e" />
+
 
 ---
 Часть таблицы множеств классов эквивалентности НКА:
@@ -39,7 +40,7 @@ $$
 ---
 ## ПКА
 
-<img width="1685" height="1257" alt="ПКА" src="https://github.com/user-attachments/assets/a9f17b89-053c-42d8-a6eb-1080fa6c4530" />
+<img width="2045" height="893" alt="graphviz (21)" src="https://github.com/user-attachments/assets/8b0621b9-2b1d-4262-a866-70c504c7e0be" />
 
 Часть таблицы множеств классов эквивалентности ПКА:
 
