@@ -51,8 +51,7 @@ $$
 
 Часть таблицы множеств классов эквивалентности ПКА:
 
-<img width="486" height="265" alt="tableAFA2 (1)" src="https://github.com/user-attachments/assets/007b11a5-9676-40a4-8e20-8369d9929ed6" />
-
+<img width="495" height="265" alt="tableAFA2 (3)" src="https://github.com/user-attachments/assets/94d8886f-8e55-47f6-a598-9e6ad0dcab08" />
 
 
 
