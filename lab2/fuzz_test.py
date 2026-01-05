@@ -154,18 +154,19 @@ def simulate_nfa(trans: Dict[str, Dict[str, Set[str]]],
 # -------------------------
 # ПКА
 # -------------------------
-afa_transitions: Dict[str, Dict[str, Set[Tuple[str, str]]]] = {}
-afa_start: str = "q0"
-afa_finals: Set[str] = {"q3", "q4", "s20"}
 
 nfa1_trans={
-    "q1": {"a": {"q2"}, "b": {"q3"}, "c": {"q4"}},
-    "q2": {"a": {"q2"}, "b": {"q3"}, "c": {"q4"}},
-    "q3": {"a": {"q2"}, "b": {"q3"}, "c": {"q4"}},
-    "q4": {"a": {"q2"}, "b": {"q3"}, "c": {"q4"}},
+    "0": {"a": {"5"}, "b": {"4"}, "c": {"1"}},
+    "1": {"a": {"2"}, "b": {"4"}, "c": {"1"}},
+    "2": {"a": {"2"}, "b": {"3", "6"}},
+    "3": {"a": {"5"}, "b": {"3"}, "c": {"1"}},
+    "4": {"a": {"5"}, "b": {"3"}, "c": {"1"}},
+    "5": {"a": {"5"}, "b": {"3", "6"}, "c": {"1"}},
+    "6": {"c": {"7"}},
+    "7": {}
 }
-nfa1_start="q1"
-nfa1_finals={"q3", "q4"}
+nfa1_start="0"
+nfa1_finals={"3", "4", "7"}
 
 nfa2_trans=nfa_transitions
 nfa2_start=nfa_start
@@ -245,4 +246,4 @@ if __name__ == '__main__':
     if mismatches:
         print('\nПримеры несовпадений (слово, regex, DFA, NFA, AFA):')
         for w, r, d, n, a in mismatches[:10]:
-            print(f"  '{w}' -> regex={r}, DFA={d}, NFA={n}, AFA={a}")
+            print(f"  '{w}' -> regex={r}, \t DFA={d}, \t NFA={n}, \t AFA={a}")
