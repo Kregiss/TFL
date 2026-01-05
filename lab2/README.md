@@ -2,7 +2,7 @@
 Моё регулярное выражение:
 
 $$
-((baa)* |(abb)* )(bb|cc)* (aa(ba|bab))* (a|b|c) a* b ((a|bcc*)abc)*
+((baa)^\* |(abb)^\* )(bb|cc)^\* (aa(ba|bab))^\* (a|b|c) a^\* b ((a|bcc^\*)abc)^\*
 $$
 
 ## Минимальный ДКА
@@ -41,22 +41,30 @@ $$
 ---
 ## ПКА
 
-<img width="2045" height="893" alt="graphviz (21)" src="https://github.com/user-attachments/assets/8b0621b9-2b1d-4262-a866-70c504c7e0be" />
+Инварианты:
+1) невозможно встретить в любом слове языка подстроку $ca^+c$, т.е. после $ca^+$ должна идти b
+2) слово кончается на b или на abc
+
+<img width="2092" height="1011" alt="graphviz (1)" src="https://github.com/user-attachments/assets/8920b60c-99bd-4a46-8415-13b56611157b" />
+
+
 
 Часть таблицы множеств классов эквивалентности ПКА:
 
-<img width="1024" height="225" alt="_tableAFA" src="https://github.com/user-attachments/assets/6d77424a-b1fd-46f9-b637-db4bc8604b23" />
+<img width="486" height="265" alt="tableAFA2 (1)" src="https://github.com/user-attachments/assets/007b11a5-9676-40a4-8e20-8369d9929ed6" />
+
+
 
 
 ## ExtReg
 
 $$
-ˆ((baa)* |(abb)* )(bb|cc)* (aabab?)* . a* b ((a|bc^+)abc)*$
+ˆ((baa)^\* |(abb)^\* )(bb|cc)^\* (aabab?)^\* . a^\* b ((a|bc^+)abc)^\*$
 $$
 
 Расширенное выражение распознаёт тот же язык, потому что:
 
-  1. $c^+=cc*=c*c$
+  1. $c^+=cc^\*=c^\*c$
   2. wildcard-операция $.$ - замена произвольного символа алфавита
   3. $b? = (b|ε)$
   4. ˆ и $ - символы начала и конца строки соответственно
