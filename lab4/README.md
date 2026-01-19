@@ -13,4 +13,23 @@
 
 Любое слово из данной грамматики имеет вид $S \to (ab|ba)(bb^\*SSa)^\*$, и его атрибут будет равен атрибуту самого последнего $b^\*SS$ (кроме тривиальных случаев, когда слово - это просто ab или ba). Атрибут этого $b^kSS$ (т.е. нетерминала T из изначальной грамматики) равен $x^2+k, k>=0, S_1.a=S_2.a=x$. Тогда получается, что в конце выполнения рекурсии SS в нетериминале T, чтобы слово удовлетворяло грамматике, оба S должны быть либо ab, либо ba (иначе $S_1.a=2 \ne S_2.a=3$), и тогда $T.a=4+k$ или $T.a=9+k$, где k - это количество b в $T=b^kSS$. 
 
-Пересечём данный язык L с регулярным языком $R=a^+b^+a^+b^+a^+b^+a^+$, и возьмём слова вида $abbabbb^{p+5}ababaabbb^pbabaaa$, где p - константа из леммы. Это слово принадлежит языку, потому что получено следующим путём: $S \to SbTa \to abbSSa \to abbSbTaSbTaa \to abbabbb^{p+5}Taabbb^pTaa \to abbabbb^{p+5}SSaabbb^pSSaa \to abbabbb^{p+5}ababaabbb^pbabaaa$
+Пересечём данный язык L с регулярным языком $R=a^+b^+a^+b^+a^+b^+a^+$, и возьмём слова вида $abbabbb^{p+5}ababaabbb^pbabaaa$, где p - константа из леммы. Это слово принадлежит языку, потому что получено следующим путём: $S \to SbTa \to abbSSa \to abbSbTaSbTaa \to abbabbb^{p+5}Taabbb^pTaa \to abbabbb^{p+5}SSaabbb^pSSaa \to abbabbb^{p+5}ababaabbb^pbabaaa$.
+
+
+
+---
+Избавимся от левой рекурсии в грамматике:
+| | |
+|---|---|
+|$S \to abP$  | $S.a := P.a$|
+|$S \to baP$  | $S.a := P.a$|
+|$S \to ab$   | $S.a := 2$|
+|$S \to ba$   | $S.a := 3$|
+|$P \to bTa$  | $P.a := T.a$|
+|$P \to bTaP$ | $P_0.a := P_1.a$|
+|$T \to SS$   | $T.a := S_1.a*S_2.a, S_1.a==S_2.a$|
+|$T \to bT$   | $T_0.a := T_1.a+1$|
+
+<img width="1000" height="500" alt="last_Figure_3" src="https://github.com/user-attachments/assets/3be2ae3f-46f5-43e6-939e-0fb745459bd1" />
+
+Верхняя оценка сложности оптимизированного парсера: $O(n^2)$.
