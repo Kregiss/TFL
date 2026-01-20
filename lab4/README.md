@@ -15,7 +15,7 @@
 
 Пересечём данный язык L с регулярным языком $R=a^+b^+a^+b^+a^+b^+a^+b^+a^+b^+a^+b^+a^+b^+a^+b^+a^+b^+a^+b^+a^+b^+a^+$, и возьмём из полученного пересечения P слова вида $abb(abbb^{p^2+8p+12}ababa)(abb(abbb^pababa)(abbb^pababa)a)a$, где p - константа из леммы. Это слово принадлежит языку, потому что получено следующим путём:
 
-<img width="981" height="1280" alt="image" src="https://github.com/user-attachments/assets/444f077a-fc73-4601-a9c0-a7e65ef82c4a" />
+<img width="981" height="1280" alt="image" src="./Docvo-neCF.jpg" />
 
 Пусть P - КС язык. Тогда по лемме о накачке для КС языков существует константа накачки p.
 Возьмём слово: $w = abbabbb^{p^2+8p+12}ababaabbabbb^pababaabbb^pababaaa$.
@@ -44,7 +44,7 @@
 |$T \to SS$   | $T.a := S_1.a*S_2.a, S_1.a==S_2.a$|
 |$T \to bT$   | $T_0.a := T_1.a+1$|
 
-<img width="1000" height="500" alt="last_Figure_3" src="https://github.com/user-attachments/assets/3be2ae3f-46f5-43e6-939e-0fb745459bd1" />
+<img width="1000" height="500" alt="last_Figure_3" src="Grafici.png" />
 
 Оптимизрованный парсер использует мемоизацию: для каждой пары (нетерминал, позиция при входе) результат вычисляется один раз и сохраняется.
 
